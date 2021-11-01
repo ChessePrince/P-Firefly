@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: 7364682651488144517
     second: Player_1
+  - first:
+      213: -6287787046888575383
+    second: Player_
+  - first:
+      213: -1182821291677670348
+    second: Player_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,11 +119,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 8
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,7 +140,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 8
-        y: 32
+        y: 8
         width: 8
         height: 8
       alignment: 0
