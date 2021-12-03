@@ -11,6 +11,12 @@ TextureImporter:
   - first:
       213: -8946057928376260297
     second: othercorner-tile
+  - first:
+      213: 7665988931285652875
+    second: BasicCube
+  - first:
+      213: 9018538420057138938
+    second: pattern1-tile
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -170,6 +176,48 @@ TextureImporter:
       bones: []
       spriteID: 739e01f56b739d380800000000000000
       internalID: -8946057928376260297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicCube
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b859b5d1150136a60800000000000000
+      internalID: 7665988931285652875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pattern1-tile
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6e7b829e8482d70800000000000000
+      internalID: 9018538420057138938
       vertices: []
       indices: 
       edges: []

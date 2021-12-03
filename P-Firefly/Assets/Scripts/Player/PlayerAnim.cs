@@ -18,11 +18,6 @@ public class PlayerAnim : MonoBehaviour
         compTransform = GetComponent<Transform>();
         compPlayerMovement = GetComponent<PlayerMovement>();
     }
-
-    void Update()
-    {
-
-    }
     public void PlayerAnimations(Vector3 dir)
     {
         if(dir.y > 0)
