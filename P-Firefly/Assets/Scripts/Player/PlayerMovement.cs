@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D compRB;
     private Vector2 movement;
 
+
     private void Awake()
     {
         compRB = GetComponent<Rigidbody2D>();
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
         if (!PauseControl.gameIsPaused)
         {
             MovementInput();
+            Rotate();
         }
     }
     private void FixedUpdate()
@@ -30,5 +32,11 @@ public class PlayerMovement : MonoBehaviour
         float my = Input.GetAxisRaw("Vertical");
 
         movement = new Vector2(mx, my).normalized;
+    }
+    void Rotate()
+    {
+        var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle-90f, Vector3.forward);
     }
 }
