@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
 
     private Rigidbody2D compRB;
     public float vel;
-    ParticleTrail compParticleTrail;
+    //ParticleTrail compParticleTrail;
     public GameObject GOparticleExp;
     public GameObject GOparticleMini;
     public string targetTag;
@@ -16,17 +16,17 @@ public class Bullet : MonoBehaviour
     private void Awake()
     {
         compRB = GetComponent<Rigidbody2D>();
-        compParticleTrail = GetComponent<ParticleTrail>();
+        //compParticleTrail = GetComponent<ParticleTrail>();
     }
     void Start()
     {
-        Move(-1);
+        Move(1);
         
     }
     
     private void Update()
     {
-        compParticleTrail.StartTheTrail();
+        //compParticleTrail.StartTheTrail();
     }
 
     void Move(int dir)
@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
     public void DestroyAllProyectiles()
     {
         Destroy(gameObject);
-    }
+    }/*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject effect = Instantiate(GOparticleMini, transform.position, Quaternion.identity);
@@ -50,5 +50,5 @@ public class Bullet : MonoBehaviour
             //other.GetComponent<Enemy>().TakeDamage(damage);
             //DestroyProjectile();
         }
-    }
+    }*/
 }
