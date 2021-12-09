@@ -20,7 +20,7 @@ public class PlayerAttack : MonoBehaviour
     }
     public void Attack(Transform muzzle)
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetMouseButtonDown(0))
         {
             Instantiate(GOBullet, muzzle.position, muzzle.rotation);
         }

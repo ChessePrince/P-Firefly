@@ -36,12 +36,13 @@ public class Bullet : MonoBehaviour
     public void DestroyAllProyectiles()
     {
         Destroy(gameObject);
-    }/*
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject effect = Instantiate(GOparticleMini, transform.position, Quaternion.identity);
         Destroy(effect, 2f);
-
+        Destroy(gameObject);
+        /*
         if (collision.gameObject.tag == targetTag)
         {
             GameObject effect2 = Instantiate(GOparticleExp, transform.position, Quaternion.identity);
@@ -49,6 +50,6 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             //other.GetComponent<Enemy>().TakeDamage(damage);
             //DestroyProjectile();
-        }
-    }*/
+        }*/
+    }
 }
