@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7344782342819938595}
   - component: {fileID: 7169749765622598971}
   m_Layer: 0
-  m_Name: Glow Explosion
+  m_Name: ExplosionGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

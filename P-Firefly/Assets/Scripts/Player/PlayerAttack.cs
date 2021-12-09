@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] GameObject GOBullet;
-    [SerializeField] Transform GOMuzzle;
+    [SerializeField] GameObject prefabGlow;
+    [SerializeField] Transform goFirePoint;
 
     void Start()
     {
@@ -15,14 +15,14 @@ public class PlayerAttack : MonoBehaviour
     {
         if (!PauseControl.gameIsPaused)
         {
-            Attack(GOMuzzle);
+            Attack(goFirePoint);
         }
     }
     public void Attack(Transform muzzle)
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(GOBullet, muzzle.position, muzzle.rotation);
+            Instantiate(prefabGlow, muzzle.position, muzzle.rotation);
         }
     }
 }

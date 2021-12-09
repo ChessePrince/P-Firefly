@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8377492357957309693}
   - component: {fileID: 7356921249315050483}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,9 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340b2b5391e1cc244909e43e1de3992f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 1000
+  vel: 1300
   GOparticleExp: {fileID: 0}
-  GOparticleMini: {fileID: 4523666667487300971, guid: b31d742dd0273df47b46acf895671031, type: 3}
+  prefabExplosionG: {fileID: 4523666667487300971, guid: b31d742dd0273df47b46acf895671031, type: 3}
   targetTag: 
 --- !u!61 &7356921249315050483
 BoxCollider2D:

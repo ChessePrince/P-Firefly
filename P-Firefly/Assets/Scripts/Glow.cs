@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Glow : MonoBehaviour
 {
-
     private Rigidbody2D compRB;
     public float vel;
     //ParticleTrail compParticleTrail;
     public GameObject GOparticleExp;
-    public GameObject GOparticleMini;
+    public GameObject prefabExplosionG;
     public string targetTag;
 
 
@@ -39,7 +38,7 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject effect = Instantiate(GOparticleMini, transform.position, Quaternion.identity);
+        GameObject effect = Instantiate(prefabExplosionG, transform.position, Quaternion.identity);
         Destroy(effect, 2f);
         Destroy(gameObject);
         /*
