@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseControl : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class PauseControl : MonoBehaviour
     [SerializeField] KeyCode pauseKey = KeyCode.Escape;
 
     [Header("References")]
-    [SerializeField] GameObject goPauseMenu;
+    [SerializeField] GameObject goPauseMenu;/*
+    public AudioSource audioSource;
+    public AudioClip clicClip;*/
 
     private void Start()
     {
@@ -41,5 +44,28 @@ public class PauseControl : MonoBehaviour
         Time.timeScale = 1;
         gameIsPaused = false;
         goPauseMenu.SetActive(false);
+        PlayClic();
+    }
+    public void ToMainMenu()
+    {
+        Time.timeScale = 1;
+        gameIsPaused = false;
+        SceneManager.LoadScene(0);
+        PlayClic();
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
+        PlayClic();
+        Debug.Log("quit");
+    }
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlayClic();
+    }
+    public void PlayClic()
+    {
+        //audioSource.PlayOneShot(clicClip, 0.8f);
     }
 }
