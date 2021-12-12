@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2214252311787694413}
   - component: {fileID: 1975068916635957444}
   - component: {fileID: 8377492357957309693}
-  - component: {fileID: 7356921249315050483}
+  - component: {fileID: 606591017720010378}
   m_Layer: 7
-  m_Name: Glow
+  m_Name: Glow 1
   m_TagString: Glow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 43f787876a367e341b59c2d185e18c54, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c351fc00cd6366e4b804abd039ea8f24, type: 3}
   m_Color: {r: 0.7019608, g: 0.14117648, b: 0.9607844, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,12 +118,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340b2b5391e1cc244909e43e1de3992f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 1300
+  vel: 1150
   GOparticleExp: {fileID: 0}
   prefabExplosionG: {fileID: 4523666667487300971, guid: b31d742dd0273df47b46acf895671031, type: 3}
   targetTag: 
---- !u!61 &7356921249315050483
-BoxCollider2D:
+--- !u!58 &606591017720010378
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -136,15 +136,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0.125, y: 1.5, z: 2.75, w: 0.125}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.125, y: 0.375}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.125, y: 0.375}
-  m_EdgeRadius: 0
+  m_Radius: 0.375
