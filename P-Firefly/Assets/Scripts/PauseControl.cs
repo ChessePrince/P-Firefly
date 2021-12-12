@@ -30,8 +30,6 @@ public class PauseControl : MonoBehaviour
         {
             Time.timeScale = 0f;
             goPauseMenu.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
         }
         else
         {
@@ -43,7 +41,5 @@ public class PauseControl : MonoBehaviour
         Time.timeScale = 1;
         gameIsPaused = false;
         goPauseMenu.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 }

@@ -11,7 +11,6 @@ public class Glow : MonoBehaviour
     public GameObject prefabExplosionG;
     public string targetTag;
 
-
     private void Awake()
     {
         compRB = GetComponent<Rigidbody2D>();
