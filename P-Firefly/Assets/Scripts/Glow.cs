@@ -9,7 +9,7 @@ public class Glow : MonoBehaviour
     //ParticleTrail compParticleTrail;
     public GameObject GOparticleExp;
     public GameObject prefabExplosionG;
-    public string targetTag;
+    //public string targetTag;
 
     private void Awake()
     {
@@ -19,7 +19,6 @@ public class Glow : MonoBehaviour
     void Start()
     {
         Move(1);
-        
     }
     
     private void Update()
@@ -37,9 +36,7 @@ public class Glow : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject effect = Instantiate(prefabExplosionG, transform.position, Quaternion.identity);
-        Destroy(effect, 2f);
-        Destroy(gameObject);
+        DestroyGlow(); //just for tests
         /*
         if (collision.gameObject.tag == targetTag)
         {
@@ -49,5 +46,11 @@ public class Glow : MonoBehaviour
             //other.GetComponent<Enemy>().TakeDamage(damage);
             //DestroyProjectile();
         }*/
+    }
+    void DestroyGlow()
+    {
+        GameObject effect = Instantiate(prefabExplosionG, transform.position, Quaternion.identity);
+        Destroy(effect, 2f);
+        Destroy(gameObject);
     }
 }
