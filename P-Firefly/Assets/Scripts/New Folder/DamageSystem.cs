@@ -28,13 +28,7 @@ public class DamageSystem : MonoBehaviour
         //UpdateHealthUI(health);
         //hurtAnim.SetTrigger("hurt");
 
-        compRnd.material = matWhite;
-        //compRnd.material.color = Color.white;
-
-        FindObjectOfType<HitStop>().Stop(0.1f);
-
-        StartCoroutine(WaitForSpawn());
-
+        
         if (health <= 0)
         {
             FindObjectOfType<BattleSystem>().EnemyDefeated();
@@ -44,11 +38,13 @@ public class DamageSystem : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        HitFeedback();
         if (collision.gameObject.tag == "PProjectile")
         {
             //other.GetComponent<Enemy>().TakeDamage(damage);
             //DestroyProjectile();
-            TakeDamage(1);
+
+            
         }
     }
     IEnumerator WaitForSpawn()
@@ -59,5 +55,15 @@ public class DamageSystem : MonoBehaviour
         //compRnd.material.color = Color.white;
         //Instantiate(breakPrefab, transform.position, Quaternion.identity);
         //Destroy(gameObject);
+    }
+    void HitFeedback()
+    {
+        compRnd.material = matWhite;
+        //compRnd.material.color = Color.white;
+
+        FindObjectOfType<HitStop>().Stop(0.05f);
+
+        StartCoroutine(WaitForSpawn());
+
     }
 }

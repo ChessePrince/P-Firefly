@@ -7,15 +7,18 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] GameObject prefabGlow;
     [SerializeField] Transform goFirePoint;
 
+    public float startTimeBtwShots;
+    private float timeBtwShots;
+
     void Start()
     {
-        
+        timeBtwShots = startTimeBtwShots;
     }
     void Update()
     {
         if (!PauseControl.gameIsPaused)
         {
-            Attack(goFirePoint);
+            CooldownAttack();
         }
     }
     public void Attack(Transform muzzle)
@@ -23,6 +26,18 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(prefabGlow, muzzle.position, muzzle.rotation);
+            timeBtwShots = startTimeBtwShots;
+        }
+    }
+    void CooldownAttack()
+    {
+        if (timeBtwShots <= 0)
+        {
+            Attack(goFirePoint);
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
         }
     }
 }
