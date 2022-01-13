@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    int health = 30;
+    public int health = 5;
     public GameObject GOplayer;
     SpriteRenderer compRnd;
     public Material matWhite;
@@ -13,20 +13,24 @@ public class PlayerHealth : MonoBehaviour
     public GameObject GOfireflyLight;
 
     public int numOfHearts;
-    public Image[] hearts;
-    public Sprite fullHearts;
-    public Sprite emptyHearts;
+    public PManagmentHealth HealthManager;
 
     void Awake()
     {
         compRnd = GetComponent<SpriteRenderer>();
         matDefault = compRnd.material;
+
+    }
+    private void Start()
+    {
+        UpdateHealth();
     }
     void TakeDamage(int amount)
     {
         //Instantiate(hurtSound, transform.position, Quaternion.identity);
         health -= amount;
         Debug.Log(health);
+        UpdateHealth();
         //StartCoroutine(ExecutePlayerFlash());
         compRnd.material = matWhite;
 
@@ -44,13 +48,13 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "EProjectile")
+        if (collision.gameObject.tag == "GlowGreen")
         {
             //other.GetComponent<Enemy>().TakeDamage(damage);
             //DestroyProjectile();
             TakeDamage(1);
         }
-        if (collision.gameObject.tag == "Enemy ")
+        if (collision.gameObject.tag == "Enemy")
         {
             //other.GetComponent<Enemy>().TakeDamage(damage);
             //DestroyProjectile();
@@ -79,31 +83,10 @@ public class PlayerHealth : MonoBehaviour
     }
     private void Update()
     {
-        if(health > numOfHearts)
-        {
-            health = numOfHearts;
-        }
-        
-        for (int i = 0; i < hearts.Length; i++)
-        {
-            if (i < health)
-            {
-                hearts[i].sprite = fullHearts;
-            }
-            else
-            {
-                hearts[i].sprite = emptyHearts;
-            }
 
-
-            if (i < numOfHearts)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
-        }
+    }
+    void UpdateHealth()
+    {
+        HealthManager.UpdateHealthUI(health);
     }
 }

@@ -15,7 +15,6 @@ public class DamageSystem : MonoBehaviour
         compRnd = GetComponent<SpriteRenderer>();
         //hitShader = Shader.Find("GUI/Text Shader");
         matDefault = compRnd.material;
-
     }
     void TakeDamage(int amount)
     {
@@ -27,7 +26,6 @@ public class DamageSystem : MonoBehaviour
 
         //UpdateHealthUI(health);
         //hurtAnim.SetTrigger("hurt");
-
         
         if (health <= 0)
         {
@@ -39,15 +37,13 @@ public class DamageSystem : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         HitFeedback();
-        if (collision.gameObject.tag == "PProjectile")
+        if (collision.gameObject.tag == "GlowPink")
         {
             //other.GetComponent<Enemy>().TakeDamage(damage);
-            //DestroyProjectile();
-
-            
+            //DestroyProjectile();   
         }
     }
-    IEnumerator WaitForSpawn()
+    IEnumerator BackToDefaultMaterial()
     {
         while (Time.timeScale != 1.0f)
             yield return null;//wait for hit stop to end
@@ -62,8 +58,6 @@ public class DamageSystem : MonoBehaviour
         //compRnd.material.color = Color.white;
 
         FindObjectOfType<HitStop>().Stop(0.05f);
-
-        StartCoroutine(WaitForSpawn());
-
+        StartCoroutine(BackToDefaultMaterial());
     }
 }
