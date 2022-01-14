@@ -12,7 +12,7 @@ public class PManagmentHealth : MonoBehaviour
 
     private void Awake()
     {
-        //testText = GetComponent<Text>();
+       
     }
     public void UpdateHealthUI(int playerHealth, int numOfHearts)
     {
@@ -45,6 +45,6 @@ public class PManagmentHealth : MonoBehaviour
     }
     public void UpdateHealthUI(int playerHealth)
     {
-        testText.text = ("HP = " + playerHealth.ToString());
+        testText.text = ("P HP = " + playerHealth.ToString());
     }
 }

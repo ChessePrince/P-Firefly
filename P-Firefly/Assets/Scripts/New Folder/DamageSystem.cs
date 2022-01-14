@@ -29,7 +29,7 @@ public class DamageSystem : MonoBehaviour
         
         if (health <= 0)
         {
-            FindObjectOfType<BattleSystem>().EnemyDefeated();
+            //FindObjectOfType<BattleSystem>().EnemyDefeated();
             Destroy(this.gameObject);
             //sceneTransitions.LoadScene("Lose");
         }
@@ -37,10 +37,11 @@ public class DamageSystem : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         HitFeedback();
-        if (collision.gameObject.tag == "GlowPink")
+        if (collision.gameObject.tag == "PinkGlow")
         {
             //other.GetComponent<Enemy>().TakeDamage(damage);
-            //DestroyProjectile();   
+            //DestroyProjectile();
+            TakeDamage(1);
         }
     }
     IEnumerator BackToDefaultMaterial()
@@ -60,4 +61,5 @@ public class DamageSystem : MonoBehaviour
         FindObjectOfType<HitStop>().Stop(0.05f);
         StartCoroutine(BackToDefaultMaterial());
     }
+
 }

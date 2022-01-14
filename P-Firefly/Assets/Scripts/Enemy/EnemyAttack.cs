@@ -16,7 +16,10 @@ public class EnemyAttack : MonoBehaviour
     }
     private void Update()
     {
-        RangedAttack();
+        if (!PauseControl.gameIsPaused)
+        {
+            RangedAttack();
+        }
     }
     void RangedAttack()
     {

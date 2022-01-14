@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 606591017720010378}
   m_Layer: 7
   m_Name: Glow 1
-  m_TagString: Glow
+  m_TagString: PinkGlow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 1150
-  GOparticleExp: {fileID: 0}
   prefabExplosionG: {fileID: 4523666667487300971, guid: b31d742dd0273df47b46acf895671031, type: 3}
   targetTag: 
 --- !u!58 &606591017720010378
