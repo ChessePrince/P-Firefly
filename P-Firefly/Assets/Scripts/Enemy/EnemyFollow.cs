@@ -11,22 +11,14 @@ public class EnemyFollow : MonoBehaviour
     public float stoppingDistance;
     public float retreatDistance;
 
-    public float startTimeBtwShots;
-    private float timeBtwShots;
-
-    public GameObject goProjectile;
-    public Transform GOMuzzle;
-
     public float offset;
 
-   
-    void Start()
+    private void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-        timeBtwShots = startTimeBtwShots;
     }
 
-    void Update()
+    private void Update()
     {
         if (Vector2.Distance(transform.position, playerPos.position) > stoppingDistance)
         {
@@ -42,18 +34,6 @@ public class EnemyFollow : MonoBehaviour
         }
         //RangedAttack();
         LookAtPlayer();
-    }
-    void RangedAttack()
-    {
-        if (timeBtwShots <= 0)
-        {
-            Instantiate(goProjectile, GOMuzzle.position, GOMuzzle.rotation);
-            timeBtwShots = startTimeBtwShots;
-        }
-        else
-        {
-            timeBtwShots -= Time.deltaTime;
-        }
     }
     void LookAtPlayer()
     {
