@@ -8,7 +8,6 @@ public class Glow : MonoBehaviour
     public float vel;
     //ParticleTrail compParticleTrail;
     public GameObject prefabExplosionG;
-    public string targetTag;
 
     private void Awake()
     {
@@ -33,12 +32,12 @@ public class Glow : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        DestroyGlow(); //just for tests
+        DestroyGlow();/*
         if (collision.gameObject.tag == targetTag)
         {
             //other.GetComponent<Enemy>().TakeDamage(damage);
+        }*/
 
-        }
     }
     void DestroyGlow()
     {
