@@ -16,8 +16,8 @@ public class EnemyFollow : MonoBehaviour
     private void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        RandomizeValues();
     }
-
     private void Update()
     {
         if (Vector2.Distance(transform.position, playerPos.position) > stoppingDistance)
@@ -32,7 +32,6 @@ public class EnemyFollow : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, playerPos.position, -speed * Time.deltaTime);
         }
-        //RangedAttack();
         LookAtPlayer();
     }
     void LookAtPlayer()
@@ -40,5 +39,11 @@ public class EnemyFollow : MonoBehaviour
         Vector3 difference = playerPos.position - transform.position;
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+    }
+    void RandomizeValues()
+    {
+        speed = Random.Range(speed - 5, speed + 1);
+        retreatDistance = Random.Range(retreatDistance - 1, retreatDistance + 1);
+        stoppingDistance = Random.Range(stoppingDistance - 1, stoppingDistance + 1);
     }
 }

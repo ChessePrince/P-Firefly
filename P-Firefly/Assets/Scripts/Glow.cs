@@ -32,7 +32,9 @@ public class Glow : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        DestroyGlow();/*
+        
+        DestroyGlow();
+        /*
         if (collision.gameObject.tag == targetTag)
         {
             //other.GetComponent<Enemy>().TakeDamage(damage);

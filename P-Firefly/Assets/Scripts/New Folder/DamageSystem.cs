@@ -36,12 +36,12 @@ public class DamageSystem : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        HitFeedback();
         if (collision.gameObject.tag == "PinkGlow")
         {
             //other.GetComponent<Enemy>().TakeDamage(damage);
             //DestroyProjectile();
             TakeDamage(1);
+            HitFeedback();
         }
     }
     IEnumerator BackToDefaultMaterial()
@@ -61,5 +61,4 @@ public class DamageSystem : MonoBehaviour
         FindObjectOfType<HitStop>().Stop(0.05f);
         StartCoroutine(BackToDefaultMaterial());
     }
-
 }

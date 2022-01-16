@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public float startTimeBtwShots;
+    float startTimeBtwShots = 0.5f;
     private float timeBtwShots;
 
     public GameObject prefabGlow;
@@ -13,6 +13,7 @@ public class EnemyAttack : MonoBehaviour
     void Start()
     {
         timeBtwShots = startTimeBtwShots;
+        RandomizeValues();
     }
     private void Update()
     {
@@ -32,5 +33,9 @@ public class EnemyAttack : MonoBehaviour
         {
             timeBtwShots -= Time.deltaTime;
         }
+    }
+    void RandomizeValues()
+    {
+        startTimeBtwShots = Random.Range(0.5f, 2f);
     }
 }
