@@ -20,6 +20,13 @@ public class EnemyFollow : MonoBehaviour
     }
     private void Update()
     {
+        if (!PauseControl.gameIsPaused) 
+        {
+            Movement();
+        }   
+    }
+    void Movement()
+    {
         if (Vector2.Distance(transform.position, playerPos.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);

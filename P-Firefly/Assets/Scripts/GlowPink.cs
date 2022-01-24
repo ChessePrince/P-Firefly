@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Glow : MonoBehaviour
+public class GlowPink : MonoBehaviour
 {
     private Rigidbody2D compRB;
     public float vel;
     //ParticleTrail compParticleTrail;
-    public GameObject prefabExplosionG;
+    public GameObject prefabExplosion;
 
     private void Awake()
     {
@@ -32,18 +32,11 @@ public class Glow : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
         DestroyGlow();
-        /*
-        if (collision.gameObject.tag == targetTag)
-        {
-            //other.GetComponent<Enemy>().TakeDamage(damage);
-        }*/
-
     }
     void DestroyGlow()
     {
-        GameObject effect = Instantiate(prefabExplosionG, transform.position, Quaternion.identity);
+        GameObject effect = Instantiate(prefabExplosion, transform.position, Quaternion.identity);
         Destroy(effect, 2f);
         Destroy(gameObject);
     }

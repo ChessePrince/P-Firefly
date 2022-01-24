@@ -21,12 +21,12 @@ public class DamageSystem : MonoBehaviour
         //Instantiate(hurtSound, transform.position, Quaternion.identity);
         health -= amount;
         Debug.Log(health+" enemy hp");
-
+        HitFeedback();
         //StartCoroutine(ExecutePlayerFlash());
 
         //UpdateHealthUI(health);
         //hurtAnim.SetTrigger("hurt");
-        
+
         if (health <= 0)
         {
             //FindObjectOfType<BattleSystem>().EnemyDefeated();
@@ -41,8 +41,15 @@ public class DamageSystem : MonoBehaviour
             //other.GetComponent<Enemy>().TakeDamage(damage);
             //DestroyProjectile();
             TakeDamage(1);
-            HitFeedback();
         }
+    }
+    void HitFeedback()
+    {
+        compRnd.material = matWhite;
+        //compRnd.material.color = Color.white;
+
+        FindObjectOfType<HitStop>().Stop(0.05f);
+        StartCoroutine(BackToDefaultMaterial());
     }
     IEnumerator BackToDefaultMaterial()
     {
@@ -52,13 +59,5 @@ public class DamageSystem : MonoBehaviour
         //compRnd.material.color = Color.white;
         //Instantiate(breakPrefab, transform.position, Quaternion.identity);
         //Destroy(gameObject);
-    }
-    void HitFeedback()
-    {
-        compRnd.material = matWhite;
-        //compRnd.material.color = Color.white;
-
-        FindObjectOfType<HitStop>().Stop(0.05f);
-        StartCoroutine(BackToDefaultMaterial());
     }
 }

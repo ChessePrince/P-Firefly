@@ -12,7 +12,6 @@ public class EnemyAttack : MonoBehaviour
 
     void Start()
     {
-        timeBtwShots = startTimeBtwShots;
         RandomizeValues();
     }
     private void Update()
@@ -37,5 +36,6 @@ public class EnemyAttack : MonoBehaviour
     void RandomizeValues()
     {
         startTimeBtwShots = Random.Range(0.5f, 2f);
+        timeBtwShots = startTimeBtwShots;
     }
 }

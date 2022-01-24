@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1975068916635957444}
   - component: {fileID: 8377492357957309693}
   - component: {fileID: 606591017720010378}
+  - component: {fileID: -7397232392143361453}
   m_Layer: 7
   m_Name: PinkGlow
   m_TagString: PinkGlow
@@ -119,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 1150
-  prefabExplosionG: {fileID: 4523666667487300971, guid: b31d742dd0273df47b46acf895671031, type: 3}
+  prefabExplosion: {fileID: 4523666667487300971, guid: b31d742dd0273df47b46acf895671031, type: 3}
 --- !u!58 &606591017720010378
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -136,3 +137,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.375
+--- !u!114 &-7397232392143361453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7113820135297856038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9dab2323db354419150623becf66d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 1.5
