@@ -16,11 +16,12 @@ public class GlowGreen : MonoBehaviour
     }
     void Start()
     {
-        Move(1);
+        //Move(1);
     }
     private void Update()
     {
         //compParticleTrail.StartTheTrail();
+        Move(1);
     }
     void Move(int dir)
     {

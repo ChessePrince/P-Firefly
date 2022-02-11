@@ -34,8 +34,8 @@ public class PlayerHealth : MonoBehaviour
         //StartCoroutine(ExecutePlayerFlash());
         compRnd.material = matWhite;
 
-        FindObjectOfType<HitStop>().Stop(0.06f);
-
+        //FindObjectOfType<HitStop>().Stop(0.06f);
+        FindObjectOfType<HitStop>().Stop(0.1f);
         StartCoroutine(WaitForIFrames());
 
         //UpdateHealthUI(health);

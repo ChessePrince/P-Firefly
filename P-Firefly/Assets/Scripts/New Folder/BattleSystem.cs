@@ -54,7 +54,7 @@ public class BattleSystem : MonoBehaviour
 
         foreach (EnemySpawn enemySpawn in enemySpawnArray)
         {
-            FindObjectOfType<HitStop>().Stop(0.1f);
+            //FindObjectOfType<HitStop>().Stop(0.1f);
             enemySpawn.Spawn();
             hasSpawned = true;
             compDoorManager[0].CloseDoor();
@@ -79,7 +79,7 @@ public class BattleSystem : MonoBehaviour
             //battle over
             state = State.BattleOver;
             Debug.Log("you done did it");
-            FindObjectOfType<HitStop>().Stop(0.5f, 0.8f);
+            //FindObjectOfType<HitStop>().Stop(0.5f, 0.8f);
             compDoorManager[0].OpenDoor();
             compDoorManager[1].OpenDoor();
             StartCoroutine(Wait());
