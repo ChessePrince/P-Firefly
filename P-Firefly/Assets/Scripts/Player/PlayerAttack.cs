@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
     public float startTimeBtwShots;
     private float timeBtwShots;
 
+    public PlayerAnimation anim;
     void Start()
     {
         timeBtwShots = startTimeBtwShots;
@@ -27,6 +28,7 @@ public class PlayerAttack : MonoBehaviour
         {
             Instantiate(prefabGlow, muzzle.position, muzzle.rotation);
             timeBtwShots = startTimeBtwShots;
+            anim.Squash();
         }
     }
     void CooldownAttack()
@@ -38,6 +40,7 @@ public class PlayerAttack : MonoBehaviour
         else
         {
             timeBtwShots -= Time.deltaTime;
+            
         }
     }
 }
