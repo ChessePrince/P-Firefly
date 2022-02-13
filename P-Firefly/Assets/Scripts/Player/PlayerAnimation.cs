@@ -11,11 +11,7 @@ public class PlayerAnimation : MonoBehaviour
     }
     public void Squash()
     {
-        if (!this.anim.GetCurrentAnimatorStateInfo(0).IsName("PlayerSquash"))
-        {
-            anim.Play("PlayerSquash");
-            Debug.Log("aj");
-        }
+        anim.Play("PlayerSquash");
     }
     public void Idle()
     {
