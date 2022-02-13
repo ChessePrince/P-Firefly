@@ -10,10 +10,11 @@ public class PlayerAttack : MonoBehaviour
     public float startTimeBtwShots;
     private float timeBtwShots;
 
-    public PlayerAnimation anim;
+    PlayerAnimation anim;
     void Start()
     {
         timeBtwShots = startTimeBtwShots;
+        anim = GetComponent<PlayerAnimation>();
     }
     void Update()
     {
@@ -40,7 +41,6 @@ public class PlayerAttack : MonoBehaviour
         else
         {
             timeBtwShots -= Time.deltaTime;
-            
         }
     }
 }

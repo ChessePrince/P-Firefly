@@ -14,12 +14,13 @@ public class PlayerHealth : MonoBehaviour
 
     public int numOfHearts;
     public PManagmentHealth HealthManager;
+    PlayerAnimation anim;
 
     void Awake()
     {
         compRnd = GetComponent<SpriteRenderer>();
         matDefault = compRnd.material;
-
+        anim = GetComponent<PlayerAnimation>();
     }
     private void Start()
     {
@@ -33,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
         UpdateHealth();
         //StartCoroutine(ExecutePlayerFlash());
         compRnd.material = matWhite;
-
+        anim.Squash();
         //FindObjectOfType<HitStop>().Stop(0.06f);
         FindObjectOfType<HitStop>().Stop(0.1f);
         StartCoroutine(WaitForIFrames());

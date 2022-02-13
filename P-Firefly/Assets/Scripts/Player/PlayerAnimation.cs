@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    public Animator anim;
+    Animator anim;
     void Start()
     {
-
+        anim = GetComponent<Animator>();
     }
     public void Squash()
     {
