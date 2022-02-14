@@ -5,14 +5,13 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 5;
+    public float maxHealth;
+    float health;
     //public GameObject GOplayer;
     SpriteRenderer compRnd;
     public Material matWhite;
     Material matDefault;
     //public GameObject GOfireflyLight;
-
-    public int numOfHearts;
     public PManagmentHealth HealthManager;
     PlayerAnimation anim;
 
@@ -21,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
         compRnd = GetComponent<SpriteRenderer>();
         matDefault = compRnd.material;
         anim = GetComponent<PlayerAnimation>();
+        health = maxHealth;
     }
     private void Start()
     {
@@ -30,7 +30,6 @@ public class PlayerHealth : MonoBehaviour
     {
         //Instantiate(hurtSound, transform.position, Quaternion.identity);
         health -= amount;
-        Debug.Log(health);
         UpdateHealth();
         //StartCoroutine(ExecutePlayerFlash());
         compRnd.material = matWhite;
@@ -88,6 +87,6 @@ public class PlayerHealth : MonoBehaviour
     }
     void UpdateHealth()
     {
-        HealthManager.UpdateHealthUI(health);
+        HealthManager.UpdateHealthUI(health, maxHealth);
     }
 }

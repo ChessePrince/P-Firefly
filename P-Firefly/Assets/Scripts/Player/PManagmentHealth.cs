@@ -10,41 +10,17 @@ public class PManagmentHealth : MonoBehaviour
     public Sprite emptyHearts;
     public Text testText;
 
+    public Image HealthBar;
+
+
     private void Awake()
     {
        
     }
-    public void UpdateHealthUI(int playerHealth, int numOfHearts)
+    public void UpdateHealthUI(float playerHealth, float maxPlayerHealth)
     {
-        if (playerHealth > numOfHearts)
-        {
-            playerHealth = numOfHearts;
-        }
-
-        for (int i = 0; i < hearts.Length; i++)
-        {
-            if (i < playerHealth)
-            {
-                hearts[i].sprite = fullHearts;
-            }
-            else
-            {
-                hearts[i].sprite = emptyHearts;
-            }
-
-
-            if (i < numOfHearts)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
-        }
-    }
-    public void UpdateHealthUI(int playerHealth)
-    {
-        testText.text = ("P HP = " + playerHealth.ToString());
+        //testText.text = ("P HP = " + playerHealth.ToString());
+        HealthBar.fillAmount = playerHealth / maxPlayerHealth;
+        Debug.Log(playerHealth);
     }
 }
