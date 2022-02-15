@@ -738,14 +738,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 370432277}
-    - target: {fileID: 2865656449039895013, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BSalir
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656449039895013, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenuFunctions, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 2865656449039895014, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -769,103 +761,11 @@ PrefabInstance:
     - target: {fileID: 2865656449039895014, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656449397368334, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656449397368334, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656449397368334, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 355.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656449397368334, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 54.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656449397368334, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 177.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656449397368334, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -81.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656449397368335, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450083007241, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_Text
-      value: Start
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450083007241, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_BestFit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450083007241, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450083007241, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450083007241, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450083007241, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_FontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450209299599, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_Text
-      value: Exit to desktop
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450209299599, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_BestFit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450209299599, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450209299599, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450209299599, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450209299599, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_FontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450296996733, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2865656450296996733, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 370432277}
-    - target: {fileID: 2865656450296996733, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: BCambioDeEscena
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450296996733, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenuFunctions, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450296996733, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2865656450296996734, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -977,22 +877,6 @@ PrefabInstance:
     - target: {fileID: 2865656450327523959, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_Name
       value: ButtonGroup
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450350001567, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_BestFit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450350001567, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450350001567, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450350001567, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}

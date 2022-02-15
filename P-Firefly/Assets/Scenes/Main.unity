@@ -5192,10 +5192,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2004505091}
-    - target: {fileID: 2865656449397368333, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToMainMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 2865656449397368334, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5220,17 +5216,9 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2865656450083007241, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450209299599, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_Text
-      value: Quit to desktop
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450209299599, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 23
+    - target: {fileID: 2865656449397368335, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2865656450296996733, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5290,11 +5278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2865656450327523958, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 324.06
+      value: 381.02
       objectReference: {fileID: 0}
     - target: {fileID: 2865656450327523958, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 147.958
+      value: 251.53
       objectReference: {fileID: 0}
     - target: {fileID: 2865656450327523958, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5326,11 +5314,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2865656450327523958, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -186
+      value: -157.52
       objectReference: {fileID: 0}
     - target: {fileID: 2865656450327523958, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 29
+      value: -22.79
       objectReference: {fileID: 0}
     - target: {fileID: 2865656450327523958, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5347,14 +5335,6 @@ PrefabInstance:
     - target: {fileID: 2865656450327523959, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
       propertyPath: m_Name
       value: ButtonGroup
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450350001567, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_Text
-      value: Return to main menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 2865656450350001567, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
