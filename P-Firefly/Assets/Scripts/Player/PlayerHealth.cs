@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     //public GameObject GOfireflyLight;
     public PManagmentHealth HealthManager;
     PlayerAnimation anim;
+    public PauseControl PauseControl;
 
     void Awake()
     {
@@ -25,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         UpdateHealth();
+        PauseControl.playerIsDead = false;
     }
     void TakeDamage(int amount)
     {
@@ -42,8 +44,7 @@ public class PlayerHealth : MonoBehaviour
         //hurtAnim.SetTrigger("hurt");
         if (health <= 0)
         {
-            //Destroy(GOplayer);
-            //sceneTransitions.LoadScene("Lose");
+            Death();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -81,9 +82,11 @@ public class PlayerHealth : MonoBehaviour
         compRnd.color = new Color(1f, 1f, 1f, 1f);
         //GOfireflyLight.SetActive(true);
     }
-    private void Update()
+    void Death()
     {
-
+        Destroy(gameObject);
+        PauseControl.playerIsDead = true;
+        PauseControl.DeathPanel();
     }
     void UpdateHealth()
     {

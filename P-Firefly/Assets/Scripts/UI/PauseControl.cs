@@ -6,25 +6,32 @@ using UnityEngine.SceneManagement;
 public class PauseControl : MonoBehaviour
 {
     public static bool gameIsPaused;
+    public static bool playerIsDead;
 
     [Header("Keybinds")]
     [SerializeField] KeyCode pauseKey = KeyCode.Escape;
 
     [Header("References")]
-    [SerializeField] GameObject goPauseMenu;/*
+    [SerializeField] GameObject goDeathPanel;
+    [SerializeField] GameObject goPauseMenu;/*          
     public AudioSource audioSource;
     public AudioClip clicClip;*/
 
     private void Start()
     {
         goPauseMenu.SetActive(false);
+        goDeathPanel.SetActive(false);
     }
     void Update()
     {
-        if (Input.GetKeyDown(pauseKey))
+        if (Input.GetKeyDown(pauseKey) && !playerIsDead)
         {
             gameIsPaused = !gameIsPaused;
             PauseGame();
+        }
+        if (playerIsDead)
+        {
+
         }
     }
     void PauseGame()
@@ -67,5 +74,12 @@ public class PauseControl : MonoBehaviour
     public void PlayClic()
     {
         //audioSource.PlayOneShot(clicClip, 0.8f);
+    }
+    public void DeathPanel()
+    {
+        if (playerIsDead)
+        {
+            goDeathPanel.SetActive(true);
+        }
     }
 }
