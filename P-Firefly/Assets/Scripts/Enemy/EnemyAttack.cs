@@ -10,9 +10,11 @@ public class EnemyAttack : MonoBehaviour
     public GameObject prefabGlow;
     public Transform goFirePoint;
 
+    EnemyAnimations anim;
     void Start()
     {
         RandomizeValues();
+        anim = GetComponent<EnemyAnimations>();
     }
     private void Update()
     {
@@ -27,6 +29,7 @@ public class EnemyAttack : MonoBehaviour
         {
             Instantiate(prefabGlow, goFirePoint.position, goFirePoint.rotation);
             timeBtwShots = startTimeBtwShots;
+            anim.Squash();
         }
         else
         {
