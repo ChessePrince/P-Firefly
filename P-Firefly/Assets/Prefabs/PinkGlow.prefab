@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2214252311787694413}
   - component: {fileID: 1975068916635957444}
   - component: {fileID: 8377492357957309693}
-  - component: {fileID: 606591017720010378}
   - component: {fileID: -7397232392143361453}
+  - component: {fileID: 8286174192915182399}
   m_Layer: 7
   m_Name: PinkGlow
   m_TagString: PinkGlow
@@ -121,22 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vel: 1150
   prefabExplosion: {fileID: 4523666667487300971, guid: b31d742dd0273df47b46acf895671031, type: 3}
---- !u!58 &606591017720010378
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7113820135297856038}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.375
 --- !u!114 &-7397232392143361453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,3 +134,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 2
+--- !u!60 &8286174192915182399
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7113820135297856038}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.75, y: 0.75}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.4, y: -0.25}
+      - {x: 0, y: 0.25}
+      - {x: -0.4, y: -0.25}
