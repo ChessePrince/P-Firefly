@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    int health = 5;
+    int health = 3;
 
     SpriteRenderer compRnd;
     public Material matWhite;

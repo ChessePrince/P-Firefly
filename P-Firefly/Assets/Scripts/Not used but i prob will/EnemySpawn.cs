@@ -6,6 +6,7 @@ public class EnemySpawn : MonoBehaviour
 {
     [SerializeField] GameObject goParticleFx;
     public bool toSpawn;
+
     private void Awake()
     {
         if(toSpawn)

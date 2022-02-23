@@ -20,7 +20,7 @@ public class EnemyFollow : MonoBehaviour
     }
     private void Update()
     {
-        if (!PauseControl.gameIsPaused) 
+        if (!PauseControl.gameIsPaused && !PauseControl.playerIsDead) 
         {
             Movement();
         }   

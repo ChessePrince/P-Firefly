@@ -11,14 +11,17 @@ public class EnemyAttack : MonoBehaviour
     public Transform goFirePoint;
 
     EnemyAnimations anim;
+
+    private bool playerIsNear;
     void Start()
     {
         RandomizeValues();
         anim = GetComponent<EnemyAnimations>();
+        playerIsNear = true; //change later
     }
     private void Update()
     {
-        if (!PauseControl.gameIsPaused)
+        if (!PauseControl.gameIsPaused && playerIsNear)
         {
             RangedAttack();
         }
