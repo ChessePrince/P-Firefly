@@ -5,45 +5,43 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuButtons : MonoBehaviour
 {
-    public AudioSource audioSource;
+    AudioSource audioSource;
     public AudioClip clicClip;
     public GameObject main, credits;
 
     private void Awake()
     {
-        //Cursor.lockState = CursorLockMode.None;
-        //Cursor.visible = true;
-
+        audioSource = GetComponent<AudioSource>();
         if (0 == SceneManager.GetActiveScene().buildIndex)
         {
-            //credits.SetActive(false);
+            credits.SetActive(false);
         }
     }
     public void ChangeScene(int index)
     {
         SceneManager.LoadScene(index);
-        //PlayClic();
+        PlayClic();
     }
     public void Credits()
     {
         main.SetActive(false);
         credits.SetActive(true);
-        //PlayClic();
+        PlayClic();
     }
     public void Back()
     {
         main.SetActive(true);
         credits.SetActive(false);
-        //PlayClic();
+        PlayClic();
     }
     public void QuitGame()
     {
         Application.Quit();
         Debug.Log("Quit");
-        //PlayClic();
+        PlayClic();
     }
     public void PlayClic()
     {
-        audioSource.PlayOneShot(clicClip, 0.8f);
+        audioSource.PlayOneShot(clicClip, 0.2f);
     }
 }
