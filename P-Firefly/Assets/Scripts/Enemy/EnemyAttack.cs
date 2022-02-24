@@ -11,13 +11,16 @@ public class EnemyAttack : MonoBehaviour
     public Transform goFirePoint;
 
     EnemyAnimations anim;
+    CharacterSfx sfx;
 
     private bool playerIsNear;
+
     void Start()
     {
         RandomizeValues();
         anim = GetComponent<EnemyAnimations>();
         playerIsNear = true; //change later
+        sfx = GetComponentInChildren<CharacterSfx>();
     }
     private void Update()
     {
@@ -33,6 +36,7 @@ public class EnemyAttack : MonoBehaviour
             Instantiate(prefabGlow, goFirePoint.position, goFirePoint.rotation);
             timeBtwShots = startTimeBtwShots;
             anim.Squash();
+            sfx.PlayShoot();
         }
         else
         {

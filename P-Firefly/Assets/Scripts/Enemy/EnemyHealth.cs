@@ -10,12 +10,14 @@ public class EnemyHealth : MonoBehaviour
     public Material matWhite;
     Material matDefault;
     EnemyAnimations anim;
+    CharacterSfx sfx;
     void Awake()
     {
         compRnd = GetComponent<SpriteRenderer>();
         //hitShader = Shader.Find("GUI/Text Shader");
         matDefault = compRnd.material;
         anim = GetComponent<EnemyAnimations>();
+        sfx = GetComponentInChildren<CharacterSfx>();
     }
     void TakeDamage(int amount)
     {
@@ -24,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
         Debug.Log(health+" enemy hp");
         HitFeedback();
         anim.Squash();
+        sfx.PlayHurt();
         //StartCoroutine(ExecutePlayerFlash());
 
         //UpdateHealthUI(health);

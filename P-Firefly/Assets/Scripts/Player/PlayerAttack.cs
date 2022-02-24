@@ -11,10 +11,12 @@ public class PlayerAttack : MonoBehaviour
     private float timeBtwShots;
 
     PlayerAnimation anim;
+    CharacterSfx sfx;
     void Start()
     {
         timeBtwShots = startTimeBtwShots;
         anim = GetComponent<PlayerAnimation>();
+        sfx = GetComponentInChildren<CharacterSfx>();
     }
     void Update()
     {
@@ -30,6 +32,7 @@ public class PlayerAttack : MonoBehaviour
             Instantiate(prefabGlow, muzzle.position, muzzle.rotation);
             timeBtwShots = startTimeBtwShots;
             anim.Squash();
+            sfx.PlayShoot();
         }
     }
     void CooldownAttack()

@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     public PManagmentHealth HealthManager;
     PlayerAnimation anim;
     public PauseControl PauseControl;
+    CharacterSfx sfx;
 
     void Awake()
     {
@@ -22,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
         matDefault = compRnd.material;
         anim = GetComponent<PlayerAnimation>();
         health = maxHealth;
+        sfx = GetComponentInChildren<CharacterSfx>();
     }
     private void Start()
     {
@@ -36,6 +38,7 @@ public class PlayerHealth : MonoBehaviour
         //StartCoroutine(ExecutePlayerFlash());
         compRnd.material = matWhite;
         anim.Squash();
+        sfx.PlayHurt();
         //FindObjectOfType<HitStop>().Stop(0.06f);
         FindObjectOfType<HitStop>().Stop(0.1f);
         StartCoroutine(WaitForIFrames());
