@@ -24,12 +24,18 @@ public class ChangePitch : MonoBehaviour
         {
             case 0:
                 audioSource.pitch = 0.5f;
-
                 break;
             case 1:
                 audioSource.pitch = 1f;
-                Debug.Log("aaaaa");
+                LowerVolume();
                 break;
         }
+    }
+    void LowerVolume()
+    {
+        if (PauseControl.gameIsPaused)
+            audioSource.volume = 0.1f;
+        else
+            audioSource.volume = 0.2f;
     }
 }
