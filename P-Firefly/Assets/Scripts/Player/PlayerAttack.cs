@@ -32,7 +32,7 @@ public class PlayerAttack : MonoBehaviour
             Instantiate(prefabGlow, muzzle.position, muzzle.rotation);
             timeBtwShots = startTimeBtwShots;
             anim.Squash();
-            sfx.PlayShoot();
+            sfx.PlayShoot(0.4f,0.6f);
         }
     }
     void CooldownAttack()

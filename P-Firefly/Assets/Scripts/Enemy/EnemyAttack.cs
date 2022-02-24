@@ -36,7 +36,7 @@ public class EnemyAttack : MonoBehaviour
             Instantiate(prefabGlow, goFirePoint.position, goFirePoint.rotation);
             timeBtwShots = startTimeBtwShots;
             anim.Squash();
-            sfx.PlayShoot();
+            sfx.PlayShoot(0.05f,0.3f);
         }
         else
         {

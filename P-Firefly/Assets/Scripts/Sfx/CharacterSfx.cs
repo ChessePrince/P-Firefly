@@ -14,10 +14,10 @@ public class CharacterSfx : MonoBehaviour
     }
     public void PlayHurt()
     {
-        audioSource.PlayOneShot(hurtClip, Random.Range(0.1f, 0.4f));
+        audioSource.PlayOneShot(hurtClip, Random.Range(0.4f, 0.6f));
     }
-    public void PlayShoot()
+    public void PlayShoot(float min, float max)
     {
-        audioSource.PlayOneShot(shootClip, Random.Range(0.1f, 0.4f));
+        audioSource.PlayOneShot(shootClip, Random.Range(min, max));
     }
 }
