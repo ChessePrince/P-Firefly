@@ -11,6 +11,7 @@ public class MainMenuButtons : MonoBehaviour
 
     private void Awake()
     {
+        main.SetActive(true);
         audioSource = GetComponent<AudioSource>();
         if (0 == SceneManager.GetActiveScene().buildIndex)
         {
