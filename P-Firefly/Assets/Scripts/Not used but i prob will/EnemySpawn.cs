@@ -24,7 +24,7 @@ public class EnemySpawn : MonoBehaviour
             }
             else
             {
-                
+                return;
             }
         }
     }

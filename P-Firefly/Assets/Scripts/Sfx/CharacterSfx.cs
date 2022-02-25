@@ -8,7 +8,7 @@ public class CharacterSfx : MonoBehaviour
 
     public AudioClip shootClip;
     public AudioClip hurtClip;
-    public AudioClip spawnClip;
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -20,9 +20,5 @@ public class CharacterSfx : MonoBehaviour
     public void PlayShoot(float min, float max)
     {
         audioSource.PlayOneShot(shootClip, Random.Range(min, max));
-    }
-    public void PlaySpawn()
-    {
-        audioSource.PlayOneShot(spawnClip, Random.Range(0.4f, 0.6f));
     }
 }

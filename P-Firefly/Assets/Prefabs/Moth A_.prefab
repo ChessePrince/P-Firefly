@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 8502899859661154481}
   - component: {fileID: 8502899859661154479}
   - component: {fileID: 8502899859661154477}
-  - component: {fileID: 8502899859661154476}
   - component: {fileID: 8502899859661154475}
   - component: {fileID: 8502899859661154474}
   - component: {fileID: 5882895695697754211}
@@ -213,20 +212,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   matWhite: {fileID: 2100000, guid: 10f2d1028b68fad4f9a351b88a29296a, type: 2}
---- !u!114 &8502899859661154476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8502899859661154482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40876c515bf85c3488c39adb774b121c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabGlow: {fileID: 7113820135297856038, guid: 94540362cc4c99549a287993ae867af9, type: 3}
-  goFirePoint: {fileID: 8502899859529839996}
 --- !u!95 &8502899859661154475
 Animator:
   serializedVersion: 3
@@ -280,7 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  target: {fileID: 0}
+  target: {fileID: 5637136472193469344, guid: 74856a544ad83564b8e4d5d1daaa4191, type: 3}
 --- !u!114 &5882895695697754208
 MonoBehaviour:
   m_ObjectHideFlags: 0
