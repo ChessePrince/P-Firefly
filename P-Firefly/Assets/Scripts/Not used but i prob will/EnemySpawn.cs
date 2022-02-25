@@ -18,6 +18,7 @@ public class EnemySpawn : MonoBehaviour
             if (!hasEntered)
             {
                 hasEntered = true;
+                Instantiate(Enemy1, Enemy2.transform); 
                 Enemy1.SetActive(true);
                 Enemy2.SetActive(true);
             }

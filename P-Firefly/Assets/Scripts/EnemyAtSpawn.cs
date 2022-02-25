@@ -10,9 +10,10 @@ public class EnemyAtSpawn : MonoBehaviour
     {
         sfx = GetComponentInChildren<CharacterSfx>();
     }
-    void Start()
+    private void OnEnable()
     {
         Instantiate(goParticleFx, transform.position, Quaternion.identity);
         sfx.PlaySpawn();
+        Debug.Log("azf");
     }
 }

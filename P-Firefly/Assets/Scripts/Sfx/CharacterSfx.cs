@@ -9,7 +9,7 @@ public class CharacterSfx : MonoBehaviour
     public AudioClip shootClip;
     public AudioClip hurtClip;
     public AudioClip spawnClip;
-    private void Start()
+    private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
     }

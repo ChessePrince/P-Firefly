@@ -10,6 +10,6 @@ public class PManagmentHealth : MonoBehaviour
     public void UpdateHealthUI(float playerHealth, float maxPlayerHealth)
     {
         HealthBar.fillAmount = playerHealth / maxPlayerHealth;
-        Debug.Log(playerHealth);
+        //Debug.Log(playerHealth);
     }
 }
