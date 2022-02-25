@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clicClip: {fileID: 8300000, guid: 5921b2165db4bb3479f551838b57effc, type: 3}
-  main: {fileID: 1729102702}
+  main: {fileID: 296036858}
   credits: {fileID: 1069743488}
 --- !u!4 &370432276
 Transform:
@@ -1649,11 +1649,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574238766}
   m_CullTransparentMesh: 1
---- !u!1 &1729102702 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2865656450327523959, guid: 6449e063bed3b694ba8c0d9993f6c87b, type: 3}
-  m_PrefabInstance: {fileID: 1400425616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2084591603
 GameObject:
   m_ObjectHideFlags: 0

@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 2856513790153772947}
   - component: {fileID: 2856513790153772946}
   - component: {fileID: 2333314995694867936}
+  - component: {fileID: 5972245917553677121}
   m_Layer: 8
   m_Name: Moth
   m_TagString: Enemy
@@ -294,6 +295,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2347190e0dc98944cb52599cd792e4f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5972245917553677121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2856513790153772938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74eb4edec7c64b4b9f24a4b4ea534cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goParticleFx: {fileID: 649047259573251511, guid: 1074cc55cac70b84aa2c5c273ec45729, type: 3}
 --- !u!1 &8015729864430101861
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootClip: {fileID: 8300000, guid: 4f1858e1a7c22304a8067958cfe49334, type: 3}
   hurtClip: {fileID: 8300000, guid: b900b7ad4e4aab0458a818357a9d8a9e, type: 3}
+  spawnClip: {fileID: 8300000, guid: b166d0257a98054429fb9e67003deccb, type: 3}
 --- !u!82 &4335660039929066525
 AudioSource:
   m_ObjectHideFlags: 0

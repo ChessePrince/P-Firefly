@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-    [SerializeField] GameObject goParticleFx;
-    public bool toSpawn;
+    bool hasEntered;
+    public GameObject Enemy1, Enemy2, Enemy3, Enemy4;
 
     private void Awake()
     {
-        if(toSpawn)
-            gameObject.SetActive(false);
-        else 
-            gameObject.SetActive(true);
+        hasEntered = false;
     }
-    public void Spawn()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        gameObject.SetActive(true);
-        Instantiate(goParticleFx, transform.position, Quaternion.identity);
+        if (col.gameObject.tag == "Player")
+        {
+            if (!hasEntered)
+            {
+                hasEntered = true;
+                Enemy1.SetActive(true);
+                Enemy2.SetActive(true);
+            }
+            else
+            {
+                
+            }
+        }
     }
 }

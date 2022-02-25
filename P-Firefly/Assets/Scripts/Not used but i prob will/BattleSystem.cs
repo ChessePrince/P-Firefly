@@ -13,7 +13,7 @@ public class BattleSystem : MonoBehaviour
     
     [SerializeField] private EnemySpawn[] enemySpawnArray;
     int numOfEnemies;
-    [SerializeField] private ColliderTrigger colliderTrigger;
+    //[SerializeField] private ColliderTrigger colliderTrigger;
     bool hasSpawned;
 
     private State state;
@@ -55,7 +55,7 @@ public class BattleSystem : MonoBehaviour
         foreach (EnemySpawn enemySpawn in enemySpawnArray)
         {
             //FindObjectOfType<HitStop>().Stop(0.1f);
-            enemySpawn.Spawn();
+            //enemySpawn.Spawn();
             hasSpawned = true;
             compDoorManager[0].CloseDoor();
             compDoorManager[1].CloseDoor();
