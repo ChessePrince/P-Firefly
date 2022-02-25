@@ -13,7 +13,7 @@ public class EnemyAtSpawn : MonoBehaviour
     private void OnEnable()
     {
         Instantiate(goParticleFx, transform.position, Quaternion.identity);
-        sfx.PlaySpawn();
+        //sfx.PlaySpawn();
         Debug.Log("azf");
     }
 }

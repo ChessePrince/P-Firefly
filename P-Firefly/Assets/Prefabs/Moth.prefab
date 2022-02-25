@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74eb4edec7c64b4b9f24a4b4ea534cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goParticleFx: {fileID: 4523666667487300971, guid: b31d742dd0273df47b46acf895671031, type: 3}
+  goParticleFx: {fileID: 2535837798409876300, guid: 7f114da6b8f987a43b346b057dbb2bd5, type: 3}
 --- !u!1 &8015729864430101861
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,9 +365,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: b166d0257a98054429fb9e67003deccb, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0

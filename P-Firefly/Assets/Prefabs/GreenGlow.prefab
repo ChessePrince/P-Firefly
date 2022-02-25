@@ -161,4 +161,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vel: 1150
-  prefabExplosion: {fileID: 649047259573251511, guid: 1074cc55cac70b84aa2c5c273ec45729, type: 3}
+  prefabExplosion: {fileID: 2732849277681367415, guid: f6d5ec420533dcb42bf45d05d8545c3d, type: 3}
