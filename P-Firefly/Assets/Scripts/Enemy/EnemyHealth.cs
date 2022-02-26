@@ -11,6 +11,9 @@ public class EnemyHealth : MonoBehaviour
     Material matDefault;
     EnemyAnimations anim;
     CharacterSfx sfx;
+
+    public bool melee = false;
+    public GameObject prefabDeath;
     void Awake()
     {
         compRnd = GetComponent<SpriteRenderer>();
@@ -19,24 +22,25 @@ public class EnemyHealth : MonoBehaviour
         anim = GetComponent<EnemyAnimations>();
         sfx = GetComponentInChildren<CharacterSfx>();
     }
-    void TakeDamage(int amount)
+    public void TakeDamage(int amount)
     {
         //Instantiate(hurtSound, transform.position, Quaternion.identity);
         health -= amount;
         Debug.Log(health+" enemy hp");
         HitFeedback();
-        anim.Squash();
-        sfx.PlayHurt();
-        //StartCoroutine(ExecutePlayerFlash());
-
-        //UpdateHealthUI(health);
-        //hurtAnim.SetTrigger("hurt");
-
+        if (!melee)
+        {
+            anim.Squash();
+        }
+        if (amount == 1)
+        {
+            sfx.PlayHurt();
+        }
         if (health <= 0)
         {
-            //FindObjectOfType<BattleSystem>().EnemyDefeated();
+            GameObject effect = Instantiate(prefabDeath, transform.position, Quaternion.identity);
+            Destroy(effect, 2f);
             Destroy(this.gameObject);
-            //sceneTransitions.LoadScene("Lose");
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

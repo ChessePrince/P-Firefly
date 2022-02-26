@@ -13,14 +13,15 @@ public class PauseControl : MonoBehaviour
 
     [Header("References")]
     [SerializeField] GameObject goDeathPanel;
-    [SerializeField] GameObject goPauseMenu;/*          
-    public AudioSource audioSource;
-    public AudioClip clicClip;*/
+    [SerializeField] GameObject goPauseMenu;          
+    AudioSource audioSource;
+    public AudioClip clicClip;
 
     private void Start()
     {
         goPauseMenu.SetActive(false);
         goDeathPanel.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -73,7 +74,7 @@ public class PauseControl : MonoBehaviour
     }
     public void PlayClic()
     {
-        //audioSource.PlayOneShot(clicClip, 0.8f);
+        audioSource.PlayOneShot(clicClip, 0.8f);
     }
     public void DeathPanel()
     {
