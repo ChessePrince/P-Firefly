@@ -10,20 +10,17 @@ public class ChangePitch : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
-    }
-    private void Start()
-    {
+        //DontDestroyOnLoad(this.gameObject);
+        buildIndex = SceneManager.GetActiveScene().buildIndex;
         audioSource = GetComponent<AudioSource>();
-        //buildIndex = SceneManager.GetActiveScene().buildIndex;
     }
     private void Update()
     {
-        buildIndex = SceneManager.GetActiveScene().buildIndex;
         switch (buildIndex)
         {
             case 0:
                 audioSource.pitch = 0.5f;
+                audioSource.volume = 0.25f;
                 break;
             case 1:
                 audioSource.pitch = 1f;
@@ -36,6 +33,6 @@ public class ChangePitch : MonoBehaviour
         if (PauseControl.gameIsPaused)
             audioSource.volume = 0.1f;
         else
-            audioSource.volume = 0.2f;
+            audioSource.volume = 0.25f;
     }
 }
