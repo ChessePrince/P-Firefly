@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
     PlayerAnimation anim;
     public PauseControl PauseControl;
     CharacterSfx sfx;
+    public GameObject prefabDeath;
 
     void Awake()
     {
@@ -90,6 +91,7 @@ public class PlayerHealth : MonoBehaviour
         Destroy(gameObject);
         PauseControl.playerIsDead = true;
         PauseControl.DeathPanel();
+        Instantiate(prefabDeath, transform.position, Quaternion.identity);
     }
     void UpdateHealth()
     {
