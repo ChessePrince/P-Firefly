@@ -41,7 +41,7 @@ public class PlayerHealth : MonoBehaviour
         anim.Squash();
         sfx.PlayHurt();
         //FindObjectOfType<HitStop>().Stop(0.06f);
-        FindObjectOfType<HitStop>().Stop(0.1f);
+        FindObjectOfType<HitStop>().Stop(0.05f);
         StartCoroutine(WaitForIFrames());
 
         //UpdateHealthUI(health);
