@@ -69,4 +69,12 @@ public class EnemyHealth : MonoBehaviour
         //Instantiate(breakPrefab, transform.position, Quaternion.identity);
         //Destroy(gameObject);
     }
+    void OnEnable()
+    {
+        EnemyManager.numberOfEnemies++;
+    }
+    void OnDisable()
+    {
+        EnemyManager.numberOfEnemies--;
+    }
 }

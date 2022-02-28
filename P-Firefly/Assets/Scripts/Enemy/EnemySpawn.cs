@@ -5,11 +5,18 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour
 {
     bool hasEntered;
-    public GameObject Enemy1, Enemy2, Enemy3, Enemy4;
+    //public GameObject Enemy1, Enemy2, Enemy3, Enemy4;
+    [SerializeField] GameObject[] enemy;
+
+    bool activated;
+    public GameObject Wall, Entrance;
+    DestructibleWall destructibleWall;
 
     private void Awake()
     {
         hasEntered = false;
+        activated = false;
+        destructibleWall = Wall.GetComponent<DestructibleWall>();
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -18,9 +25,12 @@ public class EnemySpawn : MonoBehaviour
             if (!hasEntered)
             {
                 hasEntered = true;
-                Instantiate(Enemy1, Enemy2.transform); 
-                Enemy1.SetActive(true);
-                Enemy2.SetActive(true);
+                for (int i = 0; i < enemy.Length; i++)
+                {
+                    enemy[i].SetActive(true);
+                    //Instantiate(Enemy1, Enemy2.transform);
+                }
+                Entrance.SetActive(true);
             }
             else
             {
@@ -28,4 +38,21 @@ public class EnemySpawn : MonoBehaviour
             }
         }
     }
+    private void Update()
+    {
+        if(EnemyManager.numberOfEnemies == 0 && hasEntered)
+        {
+            ActivateWall();
+        }
+    }
+    void ActivateWall()
+    {
+        if (!activated)
+        {
+            destructibleWall.wallToGreen = true;
+            Debug.Log("dead lads");
+            activated = true;
+        }
+    }
+
 }

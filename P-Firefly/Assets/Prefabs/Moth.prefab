@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trail: {fileID: 8978545592581192909, guid: 85bf74fdcbce6374aaac9990b475065c, type: 3}
-  startTimeBtwSpawn: 0.5
+  startTimeBtwSpawn: 0.25
 --- !u!1 &8015729864430101861
 GameObject:
   m_ObjectHideFlags: 0
