@@ -19,7 +19,7 @@ public class ChangePitch : MonoBehaviour
         switch (buildIndex)
         {
             case 0:
-                audioSource.pitch = 0.5f;
+                audioSource.pitch = 1f;
                 audioSource.volume = 0.25f;
                 break;
             case 1:
