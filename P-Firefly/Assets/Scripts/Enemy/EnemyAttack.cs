@@ -9,11 +9,13 @@ public class EnemyAttack : MonoBehaviour
 
     public GameObject prefabGlow;
     public Transform goFirePoint;
+    public Transform goFirePoint2;
 
     EnemyAnimations anim;
     CharacterSfx sfx;
 
     private bool playerIsNear;
+    public bool dual = false;
 
     void Start()
     {
@@ -34,6 +36,7 @@ public class EnemyAttack : MonoBehaviour
         if (timeBtwShots <= 0)
         {
             Instantiate(prefabGlow, goFirePoint.position, goFirePoint.rotation);
+            if(dual) Instantiate(prefabGlow, goFirePoint2.position, goFirePoint2.rotation);
             timeBtwShots = startTimeBtwShots;
             anim.Squash();
             sfx.PlayShoot(0.05f,0.3f);
