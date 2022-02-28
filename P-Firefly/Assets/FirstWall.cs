@@ -12,7 +12,7 @@ public class FirstWall : MonoBehaviour
     private void Start()
     {
         compRnd = GetComponent<SpriteRenderer>();
-        health = 3;
+        health = 2;
         matDefault = compRnd.material;
         
     }
@@ -22,13 +22,14 @@ public class FirstWall : MonoBehaviour
         {
             health--;
             compRnd.material = matWhite;
+            FindObjectOfType<HitStop>().Stop(0.025f);
             StartCoroutine(BackToDefaultMaterial());
         }
     }
     void WallDestroyed()
     {
         Instantiate(ExpDeath, transform.position, Quaternion.identity);
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
     private void Update()
     {

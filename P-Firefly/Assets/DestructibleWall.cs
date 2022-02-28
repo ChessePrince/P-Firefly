@@ -6,7 +6,6 @@ public class DestructibleWall : MonoBehaviour
 {
     SpriteRenderer compRnd;
     public Sprite greenWall;
-    public Sprite blueWall;
     int health;
     public GameObject ExpSpawn;
     public GameObject ExpDeath;
@@ -28,9 +27,7 @@ public class DestructibleWall : MonoBehaviour
     void WallDestroyed()
     {
         Instantiate(ExpDeath, transform.position, Quaternion.identity);
-        gameObject.SetActive(false);
-        health = 1;
-        wallToGreen = false;
+        Destroy(gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -38,6 +35,7 @@ public class DestructibleWall : MonoBehaviour
         {
             health--;
             compRnd.material = matWhite;
+            FindObjectOfType<HitStop>().Stop(0.025f);
             StartCoroutine(BackToDefaultMaterial());
             if (health <= 0)
                 WallDestroyed();
@@ -51,14 +49,8 @@ public class DestructibleWall : MonoBehaviour
     }
     public void MakeWallGreen()
     {
-        if (wallToGreen)
-        {
-            ChangeSprite();
-            Instantiate(ExpSpawn, transform.position, Quaternion.identity);
-        }
-    }
-    private void OnEnable()
-    {
-        compRnd.sprite = blueWall;
+        compRnd.sprite = greenWall;
+        Instantiate(ExpSpawn, transform.position, Quaternion.identity);
+        wallToGreen = true;
     }
 }

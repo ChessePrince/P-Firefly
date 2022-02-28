@@ -49,8 +49,7 @@ public class EnemySpawn : MonoBehaviour
     {
         if (!activated)
         {
-            destructibleWall.wallToGreen = true;
-            Debug.Log("dead lads");
+            destructibleWall.MakeWallGreen();
             activated = true;
         }
     }
