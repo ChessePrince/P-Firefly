@@ -55,14 +55,10 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.tag == "GreenGlow")
         {
-            //other.GetComponent<Enemy>().TakeDamage(damage);
-            //DestroyProjectile();
             TakeDamage(1);
         }
         if (collision.gameObject.tag == "Enemy")
         {
-            //other.GetComponent<Enemy>().TakeDamage(damage);
-            //DestroyProjectile();
             TakeDamage(1);
         }
     }

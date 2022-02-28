@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 2856513790153772946}
   - component: {fileID: 2333314995694867936}
   - component: {fileID: 5972245917553677121}
+  - component: {fileID: 3117601403994918999}
   m_Layer: 8
   m_Name: Moth
   m_TagString: Enemy
@@ -314,6 +315,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goParticleFx: {fileID: 2535837798409876300, guid: 7f114da6b8f987a43b346b057dbb2bd5, type: 3}
+--- !u!114 &3117601403994918999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2856513790153772938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc93eabd887ba24d9376f9b0d22b093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trail: {fileID: 8978545592581192909, guid: 85bf74fdcbce6374aaac9990b475065c, type: 3}
+  startTimeBtwSpawn: 0.5
 --- !u!1 &8015729864430101861
 GameObject:
   m_ObjectHideFlags: 0

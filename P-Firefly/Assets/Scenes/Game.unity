@@ -7613,6 +7613,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fly
       objectReference: {fileID: 0}
+    - target: {fileID: 864638659296186780, guid: 9cd9163381d700347a3cebccd64d78f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 864638659296186781, guid: 9cd9163381d700347a3cebccd64d78f9, type: 3}
       propertyPath: speed
       value: 10.5
@@ -8127,9 +8131,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moth
       objectReference: {fileID: 0}
+    - target: {fileID: 2856513790153772938, guid: b6a647e17e3ed4342b11fb5e6a0712ef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2856513790153772950, guid: b6a647e17e3ed4342b11fb5e6a0712ef, type: 3}
       propertyPath: speed
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3117601403994918999, guid: b6a647e17e3ed4342b11fb5e6a0712ef, type: 3}
+      propertyPath: startTimeBtwSpawn
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6a647e17e3ed4342b11fb5e6a0712ef, type: 3}
@@ -8370,6 +8382,10 @@ PrefabInstance:
     - target: {fileID: 2652048524284256828, guid: d845520b904f9f54fbf76abf3da03b5e, type: 3}
       propertyPath: m_Name
       value: Bee
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652048524284256828, guid: d845520b904f9f54fbf76abf3da03b5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2652048524284256830, guid: d845520b904f9f54fbf76abf3da03b5e, type: 3}
       propertyPath: m_RootOrder
@@ -8950,10 +8966,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5637136472193469342, guid: 74856a544ad83564b8e4d5d1daaa4191, type: 3}
-      propertyPath: prefabDeath
-      value: 
-      objectReference: {fileID: 6597121350608528874, guid: 76f323edcf9880548bb86c9705880d3b, type: 3}
     - target: {fileID: 5637136472193469342, guid: 74856a544ad83564b8e4d5d1daaa4191, type: 3}
       propertyPath: PauseControl
       value: 

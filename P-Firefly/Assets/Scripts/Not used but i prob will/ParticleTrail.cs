@@ -8,14 +8,17 @@ public class ParticleTrail : MonoBehaviour
     private float timeBtwSpawn;
     public float startTimeBtwSpawn;
 
-
+    private Transform fatherTransform;
+    private void Start()
+    {
+        fatherTransform = GetComponentInParent<Transform>();
+    }
     private void Update()
     {
-        /*
-        if (Input.anyKey)
+        if (fatherTransform.hasChanged)
         {
             StartTheTrail();
-        }*/
+        }
     }
     public void StartTheTrail()
     {
