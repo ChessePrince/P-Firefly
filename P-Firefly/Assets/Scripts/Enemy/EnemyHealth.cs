@@ -47,9 +47,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.gameObject.tag == "PinkGlow")
         {
-            //other.GetComponent<Enemy>().TakeDamage(damage);
-            //DestroyProjectile();
-            TakeDamage(1);
+            if (!melee)
+                TakeDamage(1);
         }
     }
     void HitFeedback()

@@ -93,4 +93,9 @@ public class PlayerHealth : MonoBehaviour
     {
         HealthManager.UpdateHealthUI(health, maxHealth);
     }
+    public void GainHealth()
+    {
+        health = 10;
+        UpdateHealth();
+    }
 }

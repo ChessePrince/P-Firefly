@@ -11,12 +11,15 @@ public class EnemySpawn : MonoBehaviour
     bool activated;
     public GameObject Wall, Entrance;
     DestructibleWall destructibleWall;
+    public GameObject Number;
+    RoomNumber roomNumber;
 
     private void Awake()
     {
         hasEntered = false;
         activated = false;
         destructibleWall = Wall.GetComponent<DestructibleWall>();
+        roomNumber = Number.GetComponent<RoomNumber>();
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -31,6 +34,8 @@ public class EnemySpawn : MonoBehaviour
                     //Instantiate(Enemy1, Enemy2.transform);
                 }
                 Entrance.SetActive(true);
+                RoomNumber.roomNum++;
+                roomNumber.NextRoom();
             }
             else
             {
@@ -43,6 +48,7 @@ public class EnemySpawn : MonoBehaviour
         if(EnemyManager.numberOfEnemies == 0 && hasEntered)
         {
             ActivateWall();
+            roomNumber.HPtoMax();
         }
     }
     void ActivateWall()

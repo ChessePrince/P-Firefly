@@ -16,7 +16,7 @@ public class DestructibleWall : MonoBehaviour
     private void Start()
     {
         compRnd = GetComponent<SpriteRenderer>();
-        health = 3;
+        health = 2;
         wallToGreen = false;
         matDefault = compRnd.material;
     }

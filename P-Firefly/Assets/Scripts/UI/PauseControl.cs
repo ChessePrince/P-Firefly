@@ -32,7 +32,7 @@ public class PauseControl : MonoBehaviour
         }
         if (playerIsDead)
         {
-
+            return;
         }
     }
     void PauseGame()
